@@ -18,9 +18,4 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.register<Copy>("copyReport") {
-  from(layout.buildDirectory.file("reports/my-report.pdf"))
-  into(layout.buildDirectory.dir("toArchive"))
-}
-
 buildDir = File("./build")
