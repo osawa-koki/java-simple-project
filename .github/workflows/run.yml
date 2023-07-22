@@ -13,4 +13,4 @@ jobs:
       - name: Build the Docker image
         run: docker build -t java-simple-project .
       - name: Exec java program
-        run: docker run -it --rm --name java-simple-project java-simple-project
+        run: docker run --rm --name java-simple-project java-simple-project
