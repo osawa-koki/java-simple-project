@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "org.example"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -17,3 +17,10 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.register<Copy>("copyReport") {
+  from(layout.buildDirectory.file("reports/my-report.pdf"))
+  into(layout.buildDirectory.dir("toArchive"))
+}
+
+buildDir = File("./build")
